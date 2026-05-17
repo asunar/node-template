@@ -3,9 +3,12 @@ function greet(name: string): string {
 }
 
 
-enum test {
-    one = 1,
-    two = 2,
-    three = 3
-}
+// enum test {
+//     one = 1,
+//     two = 2,
+//     three = 3
+// }
+
+// console.log(test.one)
+
 console.log(greet("World"));

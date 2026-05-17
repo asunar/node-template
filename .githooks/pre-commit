@@ -1,4 +1,11 @@
 #!/bin/sh
 set -e
+
+# Enforce erasable syntax only - no enums
+if grep -r "^\s*enum\s" --include="*.ts" --exclude-dir=node_modules .; then
+  echo "Error: enum declarations are not allowed (non-erasable syntax)"
+  exit 1
+fi
+
 npm run typecheck
 npm test
